@@ -70,7 +70,7 @@ object OptimisedIdOps {
         // This transforms the remainder of the direct lambdas of the form a |> ((a: A) => body)
         // to { val $tmp = a; { val a = $tmp; body } }.
         case Function(List(ValDef(_, name, ty, _)), body) =>
-          val tmpName = TermName("$id_ops_tmp_" + random.nextInt(Byte.MaxValue))
+          val tmpName = TermName("$id_ops_tmp_" + random.nextInt(Byte.MaxValue).toString)
 
           val tmpDecl = ValDef(Modifiers(), tmpName, ty, unwrappedSelf)
           val argDecl = ValDef(Modifiers(), name, ty, Ident(tmpName))
