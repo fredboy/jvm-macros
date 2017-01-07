@@ -3,12 +3,9 @@ scala: 2.11.7
 
 cache:
   directories:
-    - $HOME/.ivy2
-    - $HOME/.sbt
+  - $HOME/.ivy2
+  - $HOME/.sbt
 
 branches:
   only:
   - master
-
-git:
-  depth: 1
