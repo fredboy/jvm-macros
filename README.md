@@ -6,7 +6,7 @@ Macros for Scala programs.
 
 To build the package itself, the following dependencies are required:
 
-- com.google.protobuf:protobuf-java:3.1.0
+- com.google.protobuf:protobuf-java:3.5.0
 - com.lihaoyi:fastparse-utils_2.11:0.3.7
 - com.lihaoyi:fastparse_2.11:0.3.7
 - com.lihaoyi:sourcecode_2.11:0.1.1
