@@ -1,7 +1,7 @@
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_macro_library", "scala_test")
-load("//tools:project.bzl", "project")
+load("//tools/project:build_defs.bzl", "project")
 
-project("jvm-macros")
+project()
 
 scala_macro_library(
     name = "jvm-macros",
