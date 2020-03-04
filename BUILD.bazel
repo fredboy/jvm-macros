@@ -5,19 +5,13 @@ project()
 
 scala_macro_library(
     name = "jvm-macros",
-    srcs = glob([
-        "src/main/scala/**/*.java",
-        "src/main/scala/**/*.scala",
-    ]),
+    srcs = glob(["src/main/scala/**/*.scala"]),
     visibility = ["//visibility:public"],
 )
 
 scala_test(
     name = "jvm-macros-test",
-    srcs = glob([
-        "src/test/scala/**/*.java",
-        "src/test/scala/**/*.scala",
-    ]),
+    srcs = glob(["src/test/scala/**/*.scala"]),
     deps = [
         ":jvm-macros",
         "@org_scalacheck_scalacheck//jar",
