@@ -11,6 +11,7 @@ scala_macro_library(
 
 scala_test(
     name = "jvm-macros-test",
+    size = "small",
     srcs = glob(["src/test/scala/**/*.scala"]),
     deps = [
         ":jvm-macros",
