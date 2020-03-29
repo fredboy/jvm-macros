@@ -15,6 +15,6 @@ scala_test(
     srcs = glob(["src/test/scala/**/*.scala"]),
     deps = [
         ":jvm-macros",
-        "@org_scalacheck_scalacheck//jar",
+        "@maven//:org_scalacheck_scalacheck_2_11",
     ],
 )
