@@ -1,7 +1,11 @@
 organization  := "org.toktok"
 name          := "macros"
 version       := "0.1.1"
-scalaVersion  := "2.11.12"
+scalaVersion  := "2.12.17"
+
+resolvers += Resolver.mavenLocal
+publishMavenStyle := true
+publishM2Configuration := publishM2Configuration.value.withOverwrite(true)
 
 // Build dependencies.
 libraryDependencies ++= Seq(
@@ -10,7 +14,7 @@ libraryDependencies ++= Seq(
 
 // Test dependencies.
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.2.0-SNAP7"
+  "org.scalatest" %% "scalatest" % "3.2.15"
 ) map (_ % Test)
 
 import im.tox.sbt.Scalastyle
